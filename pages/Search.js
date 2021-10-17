@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, TextInput } from "react-native";
 import styled from "styled-components/native";
 
 export const Search = ({ country }) => {
@@ -41,7 +41,9 @@ export const Search = ({ country }) => {
   return (
     <SearchConatiner>
       <SafeAreaView>
+        <Text>Enter the name of the nearest city</Text>
         <TextInput
+
           style={styles.input}
           onChangeText={(text) => searchFunction(text)}
           value={search}

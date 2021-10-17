@@ -28,9 +28,6 @@ const App = () => {
         />
       </Stack.Navigator>
     </NavigationContainer>
-    //   <Main>
-    //   <Search country='GB'/>
-    // </Main>
   );
 };
 
