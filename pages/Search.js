@@ -13,7 +13,7 @@ export const Search = ({ country }) => {
 
   const fetchData = () => {
     fetch(
-      `https://api.openchargemap.io/v3/poi/?output=json&countrycode=${country}&compact=true&verbose=false&key='e05ac04b-3ec5-436b-893a-978da4b706d1'`
+      `https://api.openchargemap.io/v3/poi/?output=json&countrycode=GB&compact=true&verbose=false&key='e05ac04b-3ec5-436b-893a-978da4b706d1'`
     )
       .then((res) => res.json())
       .then((data) => setStations(data));

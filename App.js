@@ -24,7 +24,7 @@ const App = () => {
         <Stack.Screen
           name="Search"
           component={Search}
-          options={{ title: "Welcome" }}
+          options={{ title: "Search" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
