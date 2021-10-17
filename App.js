@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,} from 'react-native';
+
+import { Search } from './pages/Search';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello thereç!</Text>
-      <StatusBar style="auto" />
+      <Search country='GB'/>
+    
     </View>
   );
 }
