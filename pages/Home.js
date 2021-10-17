@@ -6,7 +6,7 @@ export const Home = ({ navigation }) => {
   return (
     <HomeContainer>
       <TopContainer>
-        <Heading>Looking where to change your electric vehicle?</Heading>
+        <Header>Looking where to change your electric vehicle?</Header>
         <CarImage source={require("../assets/ev.png")} />
       </TopContainer>
       <BottomContainer>
@@ -44,7 +44,7 @@ const BottomContainer = styled.View`
   padding-top: 50px;
 `;
 
-const Heading = styled.Text`
+const Header = styled.Text`
   font-size: 30px;
   text-align: center;
   color: #64b241;
