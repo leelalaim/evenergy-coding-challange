@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, TextInput } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import styled from "styled-components/native";
 
 export const Search = ({ country }) => {
   const [search, setSearch] = useState("");
   const [stations, setStations] = useState([]);
   const [filteredStations, setFilteredStations] = useState([]);
-  const [text, onChangeText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -24,8 +24,8 @@ export const Search = ({ country }) => {
     if (text) {
       const newData = stations.filter((item) => {
         const itemData = item
-          ? item.AddressInfo.Town.toUpperCase()
-          : "".toUpperCase();
+          ? item.AddressInfo.Town.toUpperCase() 
+          : "".toUpperCase() 
         const textData = text.toUpperCase();
         return itemData.indexOf(textData) > -1;
       });
@@ -39,7 +39,7 @@ export const Search = ({ country }) => {
   };
 
   return (
-    <View>
+    <SearchConatiner>
       <SafeAreaView>
         <TextInput
           style={styles.input}
@@ -50,14 +50,15 @@ export const Search = ({ country }) => {
       </SafeAreaView>
       {filteredStations.map((station, index) => {
         return (
-            <View key={index}>
-                <Text>{station.AddressInfo.Town}</Text>
-                <Text>{station.AddressInfo.Title}</Text>
-                <Text>{station.AddressInfo.AddressLine1}</Text>
-                </View>
-        )
+          <Card key={index}>
+            <Text>{station.AddressInfo.Town}</Text>
+            <Text>{station.AddressInfo.Title}</Text>
+            <Text>{station.AddressInfo.AddressLine1}</Text>
+            <Button><Text>Charge</Text></Button>
+          </Card>
+        );
       })}
-    </View>
+    </SearchConatiner>
   );
 };
 
@@ -69,3 +70,19 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
+
+
+const SearchConatiner = styled.ScrollView`
+flex: 1;
+width: 100%
+`
+
+const Card = styled.View`
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+`
+
+const Button = styled.TouchableOpacity`
+    background-color: pink;
+`
