@@ -1,8 +1,9 @@
 import React from "react";
-import { Button, Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 
-export const Home = ({ navigation }) => {
+import { FindButton } from "../components/FindButton";
+
+export const HomePage = ({ navigation }) => {
   return (
     <HomeContainer>
       <TopContainer>
@@ -13,9 +14,8 @@ export const Home = ({ navigation }) => {
         <FindButton
           title="Find charging stations"
           onPress={() => navigation.navigate("Search")}
-        >
-          <FindButtonText>Find charging stations</FindButtonText>
-        </FindButton>
+          FindBtnText="Find charging stations"
+        />
       </BottomContainer>
     </HomeContainer>
   );
@@ -53,14 +53,4 @@ const Header = styled.Text`
 const CarImage = styled.Image`
   width: 150px;
   height: 150px;
-`;
-const FindButton = styled.TouchableOpacity`
-  background-color: #64b241;
-  border-radius: 25px;
-`;
-
-const FindButtonText = styled.Text`
-  color: #ffffff;
-  padding: 15px 25px;
-  font-size: 20px;
 `;
