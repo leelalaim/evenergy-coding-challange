@@ -12,8 +12,6 @@
 
 $ npm start
 
-You will be redirected to - http://localhost:19002/
-
 # Work flow
 
 1. Generated an API key from openchargemap.org and tested the API on POSTMAN
