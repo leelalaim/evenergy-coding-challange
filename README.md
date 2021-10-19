@@ -1,4 +1,4 @@
-# EV.Energy coding challange
+# EV.Energy coding challenge
 
 ![EV.Energy](assets/screenshot.png?raw=true "EV.Energy App")
 
