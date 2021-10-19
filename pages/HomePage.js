@@ -7,7 +7,7 @@ export const HomePage = ({ navigation }) => {
   return (
     <HomeContainer>
       <TopContainer>
-        <Header>Looking where to change your electric vehicle?</Header>
+        <Header>Looking where to charge your electric vehicle?</Header>
         <CarImage source={require("../assets/ev.png")} />
       </TopContainer>
       <BottomContainer>
