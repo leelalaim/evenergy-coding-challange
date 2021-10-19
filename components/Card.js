@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import styled from "styled-components/native";
 
-export const Card = ({title, address, postcode, town, btnText } ) => {
+export const Card = ({ title, address, postcode, town, btnText }) => {
   return (
     <CardMain>
       <CardInfoWrapper>
@@ -53,4 +53,3 @@ const Button = styled.TouchableOpacity`
 const ButtonText = styled.Text`
   color: #ffffff;
 `;
-
