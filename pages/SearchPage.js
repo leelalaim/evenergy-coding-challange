@@ -47,6 +47,23 @@ export const SearchPage = () => {
     }
   };
 
+  // When user presses "Charge" button a POST request would be sent with the data
+
+    // const charge = (id) => {
+  //   fetch("https://example.ev.energy/chargingsession", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       user: 1,
+  //       car_id: 1,
+  //       charger_id: { id },
+  //     }),
+  //   })
+  // };
+
+
   return (
     <SearchConatiner>
       <Search
